@@ -33,7 +33,12 @@ module.exports = appInfo => {
 
     config.cors = {
         origin: '*',
+        credentials: true, // 允许 Cookie 跨域跨域
         allowMethods: 'GET,HEAD,PUT,POST,DELETE,PATCH'
+    };
+
+    config.jwt = {
+        secret: 'Nick',
     };
 
     exports.mysql = {

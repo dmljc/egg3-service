@@ -7,8 +7,6 @@ class HomeController extends Controller {
         const { ctx } = this;
         const result = await ctx.service.home.list();
 
-        console.log('result-------', result)
-
         ctx.body = {
             success: true,
             data: result
@@ -27,7 +25,7 @@ class HomeController extends Controller {
         } catch (error) {
             ctx.body = {
                 code: 500,
-                msg: '添加失败',
+                errMsg: '服务异常',
                 data: []
             }
         }
@@ -45,7 +43,7 @@ class HomeController extends Controller {
             ctx.body = {
                 code: 500,
                 success: false,
-                msg: '添加失败',
+                errMsg: '服务异常',
             }
         }
     }
@@ -64,7 +62,7 @@ class HomeController extends Controller {
             ctx.body = {
                 code: 500,
                 success: false,
-                msg: '删除失败',
+                errMsg: '服务异常',
             }
         }
     }
