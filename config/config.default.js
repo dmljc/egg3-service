@@ -38,7 +38,7 @@ module.exports = appInfo => {
     };
 
     config.jwt = {
-        secret: 'Nick',
+        secret: 'zfc',
     };
 
     exports.mysql = {
