@@ -15,7 +15,7 @@ module.exports = app => {
     router.post('/user/login', controller.user.login);
 
     // crud
-    router.get('/list', _jwt, controller.home.list);
+    router.post('/list', _jwt, controller.home.list);
     router.post('/add', _jwt, controller.home.add);
     router.post('/update', _jwt, controller.home.update);
     router.delete('/del/user', _jwt,controller.home.deluser);
